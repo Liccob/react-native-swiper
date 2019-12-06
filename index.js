@@ -257,7 +257,6 @@ export default class RankFloor extends React.Component {
 			console.log('release and movePage');
 			this.movePage(step);
 			// 恢复首页滚动
-			page && page._scrollview && page && page._scrollview.setNativeProps({ scrollEnabled: true });
 		};
 		const dataSource = this.makeDataArr();
 		const responder = PanResponder.create({
@@ -268,7 +267,6 @@ export default class RankFloor extends React.Component {
 				// 	return false;
 				// }
 				// 使首页禁止滚动
-				page && page._scrollview && page && page._scrollview.setNativeProps({ scrollEnabled: false });
 				this._stopAutoPlay();
 				return true;
 			},
